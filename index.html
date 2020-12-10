@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engenharia de Software</title>
+    <meta name="author" content="Igor Brown" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="Resource-type" content="Document" />
+    <link rel="stylesheet" type="text/css" href="assets/js/jquery.pagepiling.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/media-queries.css" />
+    <!--[if IE]>
+    <script type="text/javascript">
+      var console = { log: function() {} };
+    </script>
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.pagepiling.min.js"></script>
+    <script type="text/javascript">
+        var deleteLog = false;
+          
+          function eachAnchors() {
+             var anchorss = [];
+             $('.section').each(function () {
+                 var i = $(this).attr('id');
+                 anchorss.push(i);
+             });
+             return anchorss;
+          }
+          
+         $(document).ready(function() {
+            var firstReady = true;
+            $('.shadoww').show();
+            $('.intro').fadeIn();
+
+            $('#pagepiling').pagepiling({
+               menu: '#menu',
+               anchors: eachAnchors(),
+               loopTop: true,
+               loopBottom: true,
+               onLeave: function(index, nextIndex, direction) {
+                  console.log(firstReady);
+                  
+                  $('.shadoww').each(function(){
+                        $(this).hide();
+                  });
+                  $('.intro').each(function(){
+                        $(this).fadeOut();
+                  });
+               },
+               afterRender: function(index) {
+                  // after render
+               },
+               afterLoad: function(anchorLink, index, nextIndex) {            
+                  if (index == index) {
+                     var sectionIdx = document.querySelector(`#${anchorLink}`);
+                     
+                     $(sectionIdx).find('.intro').fadeIn(600);
+                     console.log($(sectionIdx));    
+                     
+                     $(sectionIdx).find('.shadoww').show();                
+                  }
+               }
+            });
+         });
+    </script>
+</head>
+
+<body>
+    <div class="preloader bg-fade">
+        <div class="lds-default">
+            <img src="assets/img/stay-home-logo-w.svg" class="logo" alt="">
+            <div class="loader4"></div>
+        </div>
+    </div>
+
+    <div class="footer-uv">
+        <p><span id="date-now"></span> - UNIVERSIDADE DE VASSOURAS</p>
+    </div>
+
+    <!-- menu -->
+    <div class="menu-section">
+        <div class="menu-toggle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+
+        <!-- menu effect -->
+        <div class="content aaaaaaaaaaa">
+            <div class="block" data-fx="7">
+                <h1>Menu</h1>
+                <a href="#gastronomia" class="block__link" data-img="assets/img/bg1.jpg">Gastronomia</a>
+                <a href="#atividades-fisicas-em-casa" class="block__link" data-img="assets/img/bg2.jpg">atividades Físicas em Casa</a>
+                <a href="#casa-e-jardim" class="block__link" data-img="assets/img/bg3.jpg">Casa e Jardim</a>
+                <a href="#beleza-e-cuidados-pessoais" class="block__link" data-img="assets/img/bg4.jpg">Beleza & Cuidados Pessoais</a>
+                <a href="#esports" class="block__link" data-img="assets/img/bg5.jpg">eSports</a>
+                <a href="#saude" class="block__link" data-img="assets/img/bg6.jpg">Saúde</a>
+            </div>
+            <div class="block" data-fx="7" style="padding-top: 6em;">
+                <a href="#empreendedorismo" class="block__link" data-img="assets/img/bg8.jpg">Empreendedorismo</a>
+                <a href="#tecnologia" class="block__link" data-img="assets/img/bg9.jpg">Tecnologia</a>
+                <a href="#psicologia" class="block__link" data-img="assets/img/bg10.jpg">Psicologia</a>
+                <a href="#economia-criativa" class="block__link" data-img="assets/img/bg11.jpg">Economia Criativa</a>
+                <a href="#autoconhecimento" class="block__link" data-img="assets/img/bg12.jpg">Autoconhecimento</a>
+                <a href="#biologia" class="block__link" data-img="assets/img/bg13.jpg">Biologia</a>
+                <a href="#entretenimento" class="block__link" data-img="assets/img/bg7.jpg">Entretenimento</a>
+            </div>
+        </div>
+        <!-- end menu effect -->
+    </div>
+    <!-- menu -->
+    <div class="uv-header">
+    </div>
+    <!-- <div id="callbacksDiv"></div>  -->
+    <div id="pagepiling">
+        <!-- SECTION START -->
+        <section class="section" id="gastronomia">
+            <div class="container">
+                <div class="row justify-content-center fd">
+                    <div class="intro">
+                        <h1>Gastronomia</h1>
+                        <p>Aprenda a fazer sua pizza caseira.</p>
+                        <a class="btn btn-white" href="http://treinamentofreefire.site/index.html"> Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION END -->
+        <!-- SECTION START -->
+        <section class="section" id="atividades-fisicas-em-casa">
+            <div class="container">
+                <div class="row justify-content-center fd">
+                    <div class="intro">
+                        <h1>Atividades <br />Físicas<br /> em Casa</h1>
+                        <p class="grey">Um projeto de saúde que nasceu com o objetivo de ajudar as pessoas.</p>
+                        <a class="btn btn-white" href="http://mateusprado.org.br/atividades-fisicas-em-casa/"> Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION END -->
+        <!-- SECTION START -->
+        <section class="section" id="casa-e-jardim">
+            <div class="container">
+                <div class="row justify-content-center fd">
+                    <div class="intro">
+                        <h1>Casa & Jardim</h1>
+                        <p class="grey">Muitas dicas para seu lar.</p>
+                        <a class="btn btn-white btn-solid" href="http://mateusprado.org.br/casa-e-jardim/"> Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION START -->
+        <!-- SECTION START -->
+        <section class="section" id="beleza-e-cuidados-pessoais">
+            <div class="container">
+               <div class="row justify-content-center fd">
+                  <div class="intro">
+                     <h1>Beleza & <br>Cuidados<br>Pessoais</h1>
+                     <p class="grey">Cuidados pessoais e bem-estar na quarentena. </p>
+                     <a class="btn btn-white" href="http://mateusprado.org.br/beleza-e-cuidados-pessoais/"> Saiba mais</a>
+                  </div>
+               </div>
+            </div>
+        </section>
+        <!-- SECTION START -->
+        <!-- SECTION START -->
+        <section class="section" id="saude">
+            <div class="container">
+                <div class="row justify-content-center fd">
+                    <div class="intro">
+                        <h1>Saúde</h1>
+                        <p class="grey">Fique atento às principais orientações contra o covid-19.</p>
+                        <a class="btn btn-white" href="http://mateusprado.org.br/saude/saude.html"> Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION START -->
+        <!-- SECTION START -->
+        <section class="section" id="esports">
+            <div class="container">
+                <div class="row justify-content-center fd">
+                    <div class="intro">
+                        <h1>eSports</h1>
+                        <p>Fique por dentro de tudo que está acontecendo no mundo dos eSports.</p>
+                        <a class="btn btn-white" href="http://mateusprado.org.br/esports/"> Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION START -->
+        <!-- SECTION START -->
+        <section class="section" id="entretenimento">
+            <div class="container">
+                <div class="row justify-content-center fd">
+                    <div class="intro">
+                        <h1>Entretenimento</h1>
+                        <p>O seu portal de diversão</p>
+                        <a class="btn btn-white" href="http://mateusprado.org.br/entretenimento/"> Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION START -->
+        <!-- SECTION START -->
+        <section class="section" id="empreendedorismo">
+            <div class="container">
+                <div class="row justify-content-center fd">
+                    <div class="intro">
+                        <h1>Empreendedorismo</h1>
+                        <p>Seja um Empreendedor Acima da Média.</p>
+                        <a class="btn btn-white" href="http://mateusprado.org.br/empreendedorismo/"> Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION START -->
+        <!-- SECTION START -->
+        <section class="section" id="tecnologia">
+            <div class="container">
+                <div class="row justify-content-center fd">
+                    <div class="intro">
+                        <h1>Tecnologia</h1>
+                        <p>Seja bem vindo ao mundo da tecnologia.</p>
+                        <a class="btn btn-white" href="http://mateusprado.org.br/tecnologia/"> Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION START -->
+        <!-- SECTION START -->
+        <section class="section" id="psicologia">
+            <div class="container">
+                <div class="row justify-content-center fd">
+                    <div class="intro">
+                        <h1>Psicologia</h1>
+                        <p>Como está a sua Mente na Quarentena?</p>
+                        <a class="btn btn-white" href="http://mateusprado.org.br/psicologia/Sua%20Mente%20na%20Quarentena.html"> Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION START -->
+        <!-- SECTION START -->
+        <section class="section" id="economia-criativa">
+            <div class="container">
+                <div class="row justify-content-center fd">
+                    <div class="intro">
+                        <h1>Economia<br>Criativa</h1>
+                        <p>Muito além do capital, da matéria-prima e da mão de obra.</p>
+                        <a class="btn btn-white" href="http://economia.treinamentofreefire.site/"> Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION START -->
+        <!-- SECTION START -->
+        <section class="section" id="autoconhecimento">
+            <div class="container">
+                <div class="row justify-content-center fd">
+                    <div class="intro">
+                        <h1>Autoconhecimento</h1>
+                        <p>O conhecimento de um indivíduo sobre si mesmo.</p>
+                        <a class="btn btn-white" href="http://mateusprado.org.br/autoconhecimento/"> Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION START -->
+        <!-- SECTION START -->
+        <section class="section" id="biologia">
+            <div class="container">
+                <div class="row justify-content-center fd">
+                    <div class="intro">
+                        <h1>Biologia</h1>
+                        <p>Ciência que estuda a vida em seus mais variados aspectos.</p>
+                        <a class="btn btn-white" href="http://mateusprado.org.br/biologia/biologia.html"> Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION START -->
+        </div>
+        <script>
+            $(".menu-toggle").on('click', function() {
+               $(this).toggleClass("on");
+               $('.menu-section').toggleClass("on");
+               $("nav ul").toggleClass('hidden');
+            });
+            
+            // Preloader Js
+            $(document).ready(function() {
+               setTimeout(() => {
+                  $('.preloader').fadeOut(); 
+               }, 2000);
+            });
+
+            // date current 
+            var d = new Date();
+            var n = d.getFullYear();
+            var datt = document.querySelector('#date-now'), i;
+
+            datt.innerHTML = n;
+
+
+            // Random sections
+            var sections = $('section');
+            for(var i = 0; i < sections.length; i++){
+               var target = Math.floor(Math.random() * sections.length -1) + 1;
+               var target2 = Math.floor(Math.random() * sections.length -1) +1;
+               sections.eq(target).before(sections.eq(target2));
+            }
+
+
+            // remover menu da view
+            $('.block__link').on('click', function(e) {
+                e.preventDefault();
+                var self = this;
+
+                setTimeout(function() {
+                    window.location.href = self.href;
+                }, 2000);
+
+                console.log($('.menu-section'));
+
+                $('.menu-toggle').delay(600).removeClass('on', 500);
+                $('.menu-section').delay(600).removeClass('on', 500);
+                $('nav ul').delay(600).removeClass('hidden', 500);
+
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <script src="assets/js/charming.min.js"></script>
+		<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+		<script src="assets/js/TweenMax.min.js"></script>
+		<script src="assets/js/demo.js"></script>
+    </body>
+
+</html>

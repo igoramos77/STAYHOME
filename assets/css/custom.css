@@ -1,0 +1,323 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+	color: #f2f2f2;
+}
+h1{
+	font-size: 6em;
+}
+p{
+	font-size: 2em;
+}
+.section{
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-position: right;
+  height: 100vh;
+}
+#section2 .intro{
+left: -150%;
+position: relative;
+}
+#section2 p{
+display: none;
+}
+#section3 .intro{
+left: 140%;
+position: relative;
+}
+#pp-nav {
+  margin-right: 48px;
+}
+#pp-nav li .active span, .pp-slidesNav .active span {
+  -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+    opacity: 1;
+    background-color: #c32865;
+}
+#pp-nav li, .pp-slidesNav li {
+  width: 8px;
+  height: 8px;
+  margin: 1.6rem auto;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+#pp-nav li span{
+  background: #fff;
+  border: none;
+  -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+
+
+/**/
+#gastronomia{
+  background-image: url(../img/bg1.jpg);
+}
+#atividades-fisicas-em-casa{
+  background-image: url(../img/bg2.jpg);
+}
+#casa-e-jardim{
+  background-image: url(../img/bg3.jpg);
+}
+#beleza-e-cuidados-pessoais{
+  background-image: url(../img/bg4.jpg);
+}
+#esports{
+  background-image: url(../img/bg5.jpg);
+}
+#saude{
+  background-image: url(../img/bg6.jpg);
+}
+#entretenimento{
+  background-image: url(../img/bg7.jpg);
+}
+#empreendedorismo{
+  background-image: url(../img/bg8.jpg);
+}
+#tecnologia{
+  background-image: url(../img/bg9.jpg);
+}
+#psicologia{
+  background-image: url(../img/bg10.jpg);
+}
+#economia-criativa{
+  background-image: url(../img/bg11.jpg);
+}
+#autoconhecimento{
+  background-image: url(../img/bg12.jpg);
+}
+#biologia{
+  background-image: url(../img/bg13.jpg);
+}
+/**/
+.intro {
+  width: 100%;
+  text-align: left;
+  display: none;
+}
+.intro h1 {
+  text-align: left;
+  font-weight: 900;
+  font-size: 5rem;
+  line-height: 1.2;
+  color: #c32865;
+}
+.intro p {
+  font-size: 1em;
+}
+
+.logo-uv {
+  width: 120px;
+  /* filter: drop-shadow(0px 9px 42px gray); */
+}
+.logo-stay {
+  width: 80px;
+  margin-left: 25px;
+  /* filter: drop-shadow(0px 9px 42px gray); */
+}
+
+/*  menu */
+.menu-toggle {
+  width: 32px;
+  height: 30px;
+  position: absolute;
+  top: 100px;
+  right: 46px;
+  cursor: pointer;
+  z-index: 999;
+}
+.menu-toggle.on .one {
+  -moz-transform: rotate(45deg) translate(2px, 2px);
+  -ms-transform: rotate(45deg) translate(2px, 2px);
+  -webkit-transform: rotate(45deg) translate(2px, 2px);
+  transform: rotate(45deg) translate(2px, 2px);
+}
+.menu-toggle.on .two {
+  opacity: 0;
+}
+.menu-toggle.on .three {
+  -moz-transform: rotate(-45deg) translate(8px, -10px);
+  -ms-transform: rotate(-45deg) translate(8px, -10px);
+  -webkit-transform: rotate(-45deg) translate(8px, -10px);
+  transform: rotate(-45deg) translate(8px, -10px);
+}
+
+.one,
+.two,
+.three {
+  width: 100%;
+  height: 2px;
+  background: white;
+  margin: 6px auto;
+  backface-visibility: hidden;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans;
+  list-style: none;
+  margin: 4em auto;
+  text-align: center;
+}
+nav ul.hidden {
+  display: none;
+}
+nav ul a {
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  line-height: 1.5;
+  width: 100%;
+  display: block;
+  font-weight: bold;
+}
+nav ul a:hover {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  color: #fff;
+  text-decoration: none;
+  zoom: 1.2;
+}
+.aaaaaaaaaaa {
+  display: none;
+}
+
+.menu-section.on {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  background: radial-gradient(circle,rgba(0, 0, 0, 0.9) 100%,  rgba(199, 199, 199, 0.1) 0%);
+  position: absolute;
+  z-index: 9999;
+}
+.menu-section.on .aaaaaaaaaaa {
+  display: block;
+}
+
+
+/*  menu */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.lds-default {
+  width: 150px;
+  text-align: center;
+}
+.bg-fade {
+  /* background: radial-gradient(circle, rgba(112,0,195,1) 0%, rgba(50,0,88,1) 100%); */
+  background: radial-gradient(circle, rgb(45, 45, 45) 0%, rgb(19, 19, 19) 100%);
+}
+.btn {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  padding: 20px 45px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 39px 0;
+  letter-spacing: 0.2px;
+}
+.btn:hover {
+  color: #333131;
+  background: #fff;
+}
+
+.btn-solid {
+  background: #fff !important;
+  color: #333131 !important;
+}
+.footer-cel {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.loader4 {
+  width:45px;
+  height:45px;
+  display:inline-block;
+  padding:0px;
+  border-radius:100%;
+  border:5px solid;
+  border-top-color:rgb(255, 255, 255);
+  border-bottom-color:rgba(255,255,255, 0.3);
+  border-left-color:rgb(255, 255, 255);
+  border-right-color:rgba(255,255,255, 0.3);
+  -webkit-animation: loader4 1s ease-in-out infinite;
+  animation: loader4 1s ease-in-out infinite;
+  margin: 20px 0;
+}
+@keyframes loader4 {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+@-webkit-keyframes loader4 {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+
+.uv-header {
+  position:fixed;
+  top:50px;
+  left:50px;
+  color:white;
+  z-index:999;
+  background-color: #19bc9d;
+  -webkit-animation-name: logo-animation;
+  -webkit-animation-duration: 9s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: logo-animation;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  /**/
+  width: 128px !important;
+  height: 128px !important;
+  display: block;
+  background: url(../img/logo-uv-w.svg) no-repeat center center;
+  background-size: contain !important;
+}
+
+@keyframes logo-animation {
+  33% {
+    background: url(../img/logo-eng-soft.svg) no-repeat center center;
+    background-size: contain !important;
+  }
+  66% {
+    background: url(../img/stay-home-logo-w.svg) no-repeat center center;
+    background-size: contain !important;
+  }
+  100% {
+    background: url(../img/logo-uv-w.svg) no-repeat center center;
+    background-size: contain !important;
+  }
+}
+.btn.focus, .btn:focus {
+  box-shadow: none !important;
+}
+.grey {
+  color: #4a4a4a !important;
+}
